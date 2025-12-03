@@ -1,0 +1,385 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  background-color: #f5fbff;
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Визуально скрытый текст (для заголовков, которые нужны только для доступности) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Шапка и навигация */
+
+.site-header {
+  background-color: #004f8a;
+  color: #ffffff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.logo-link img {
+  border-radius: 4px;
+  max-height: 40px;
+  width: auto;
+}
+
+
+.site-title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.main-nav {
+  flex: 1;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: #e5f4ff;
+  background-color: transparent;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link--active {
+  background-color: #ffffff;
+  color: #004f8a;
+}
+
+.cart-button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  color: #004f8a;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.cart-button:hover {
+  background-color: #e5f4ff;
+}
+
+/* Основной контент и секции */
+
+main.container {
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+
+.page-section {
+  margin-bottom: 32px;
+}
+
+.page-intro-title {
+  margin-top: 0;
+}
+
+/* Внутренняя навигация по странице */
+
+.page-nav__list {
+  margin: 8px 0 0;
+  padding-left: 1.2rem;
+}
+
+.page-nav__list li {
+  margin-bottom: 4px;
+}
+
+/* Кнопки */
+
+.btn {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn--primary {
+  background-color: #004f8a;
+  color: #ffffff;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  background-color: #0062b1;
+}
+
+.btn--secondary {
+  background-color: #e5f4ff;
+  color: #004f8a;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+  background-color: #d2e8ff;
+}
+
+/* Медиа-блоки */
+
+.media {
+  margin: 16px 0;
+}
+
+.media__caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Таблица расписания */
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table caption {
+  margin-bottom: 8px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #c3d6ea;
+  padding: 8px;
+  text-align: left;
+}
+
+.schedule-table thead {
+  background-color: #e5f4ff;
+}
+
+/* Формы */
+
+.form {
+  max-width: 480px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #c3d6ea;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-note {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Калькулятор тренировок */
+
+.calc-block {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  max-width: 420px;
+}
+
+.calc-block input[type="number"] {
+  max-width: 180px;
+}
+
+.calc-block .calc-result {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+/* Магазин: повторяющиеся блоки */
+
+.shop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.product-card {
+  flex: 1 1 220px;
+  max-width: 300px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 1.05rem;
+}
+
+.product-description {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.product-price {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+/* Ссылки "к началу" */
+
+.back-to-top {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+/* Подвал */
+
+.site-footer {
+  border-top: 1px solid #c3d6ea;
+  background-color: #f0f6fb;
+  padding: 10px 0;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #555;
+}
+
+/* Адаптивность */
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .site-title {
+    font-size: 1.2rem;
+  }
+
+  .nav-list {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .cart-button {
+    align-self: flex-start;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-list {
+    gap: 6px;
+  }
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Плавание — Главная</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Графическая ссылка (логотип) на главную -->
+      <a href="index.html" class="logo-link">
+        <img
+          src="https://4.downloader.disk.yandex.ru/preview/971c4c9f32a8051cfb2c8b6c931960212742e8903cf32d0489fcae1459bdbaf6/inf/KbcLMIbcXiVXFnBxz64h_LtSDVBh1fRbTj-aX6_ihu4r9wltf6XoA2Xd2uxmuJlHlXXS5zb0LEMCA5_ERkO_jA%3D%3D?uid=1130000067492822&filename=ChatGPT%20Image%2025%20%D0%BD%D0%BE%D1%8F%D0%B1.%202025%20%D0%B3.%2C%2016_56_01.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1130000067492822&tknv=v3&size=2940x1662"
+          alt="На главную"
+        />
+      </a>
+
+      <h1 class="site-title">Плавание</h1>
+
+      <nav class="main-nav" aria-label="Основная навигация по сайту">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link nav-link--active">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="techniques.html" class="nav-link">Техники</a>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html" class="nav-link">Магазин</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Счётчик корзины (работает на странице магазина) -->
+      <button type="button" class="cart-button" id="cart-button">
+        Корзина: <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Внутренняя навигация по странице -->
+    <section id="top" class="page-section page-section--intro">
+      <h2 class="visually-hidden">Содержание страницы</h2>
+      <p class="page-intro-title"><strong>Содержание этой страницы:</strong></p>
+      <nav class="page-nav" aria-label="Навигация по разделам страницы">
+        <ul class="page-nav__list">
+          <li><a href="#about">О плавании</a></li>
+          <li><a href="#benefits">Зачем плавать</a></li>
+          <li><a href="#schedule">Расписание тренировок</a></li>
+          <li><a href="#contact">Обратная связь</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section id="about" class="page-section">
+      <h2>О плавании</h2>
+      <p>
+        Плавание — это вид спорта и способ поддерживать здоровье.
+        Оно развивает выносливость, укрепляет мышцы и щадит суставы.
+      </p>
+
+      <figure class="media">
+        <a
+          href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://1.downloader.disk.yandex.ru/preview/e4b9284b28febd72a12fa5334ce6b53b2aa5b4883c4b9b7af38cbb001f6629c8/inf/471JdXOFjiU3Xda8gAIq60ssGh3bb-rBYyY4t94y-b3nLSyyhcsXV-W7hp9sGx8ZfVmsFGsdx5TqmkFNVQ_HEQ%3D%3D?uid=1130000067492822&filename=%D0%BF%D0%BB%D0%B0%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1130000067492822&tknv=v3&size=2940x1662"
+            alt="Соревнования по плаванию в бассейне"
+          />
+        </a>
+        <figcaption class="media__caption">
+          Клик по изображению откроет статью о плавании в Википедии
+          в новой вкладке.
+        </figcaption>
+      </figure>
+
+      <p>
+        Также можно посетить сайт
+        <a href="https://www.worldaquatics.com/" target="_blank" rel="noopener">
+          World Aquatics
+        </a>
+        — международную федерацию водных видов спорта.
+      </p>
+
+      <p class="back-to-top">
+        <a href="#top">К началу страницы ↑</a>
+      </p>
+    </section>
+
+    <section id="benefits" class="page-section">
+      <h2>Зачем плавать</h2>
+      <p>Пример <strong>ненумерованного списка</strong> полезных эффектов:</p>
+      <ul>
+        <li>Улучшает работу сердца и лёгких</li>
+        <li>Развивает все группы мышц</li>
+        <li>Подходит для восстановления после травм</li>
+        <li>Снимает стресс и улучшает сон</li>
+      </ul>
+
+      <!-- Небольшой калькулятор на JS (см. script.js) -->
+      <div class="calc-block">
+        <h3>Примерный расчёт тренировок за месяц</h3>
+        <label for="sessions-per-week">
+          Сколько раз в неделю вы планируете заниматься?
+        </label>
+        <input
+          type="number"
+          id="sessions-per-week"
+          min="1"
+          max="14"
+          placeholder="Например, 3"
+        />
+        <button type="button" class="btn btn--secondary" id="calc-sessions-btn">
+          Посчитать
+        </button>
+        <p class="calc-result" id="calc-result"></p>
+      </div>
+
+      <p class="back-to-top">
+        <a href="#top">К началу страницы ↑</a>
+      </p>
+    </section>
+
+    <section id="schedule" class="page-section">
+      <h2>Расписание тренировок</h2>
+
+      <table class="schedule-table">
+        <caption><strong>Расписание тренировок</strong></caption>
+        <thead>
+          <tr>
+            <th scope="col">День</th>
+            <th scope="col">Время</th>
+            <th scope="col">Группа</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Понедельник</td>
+            <td>18:00–19:00</td>
+            <td>Новички</td>
+          </tr>
+          <tr>
+            <td>Среда</td>
+            <td>18:00–19:30</td>
+            <td>Продвинутые</td>
+          </tr>
+          <tr>
+            <td>Пятница</td>
+            <td>17:30–18:30</td>
+            <td>Дети</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="back-to-top">
+        <a href="#top">К началу страницы ↑</a>
+      </p>
+    </section>
+
+    <section id="contact" class="page-section">
+      <h2>Обратная связь</h2>
+      <p class="form-note">
+        Эта форма отправляет данные на учебный сервер. Поля помечены как обязательные,
+        чтобы не отправлять пустые значения.
+      </p>
+
+      <form
+        action="https://httpbin.org/post"
+        method="post"
+        class="form"
+      >
+        <div class="form-group">
+          <label for="feedback-name">Ваше имя</label>
+          <input
+            type="text"
+            id="feedback-name"
+            name="feedbackName"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="feedback-email">Email</label>
+          <input
+            type="email"
+            id="feedback-email"
+            name="feedbackEmail"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="feedback-level">Ваш уровень плавания</label>
+          <select id="feedback-level" name="feedbackLevel" required>
+            <option value="">Выберите...</option>
+            <option value="novice">Новичок</option>
+            <option value="middle">Средний</option>
+            <option value="advanced">Продвинутый</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="feedback-message">
+            Сообщение (вопрос, отзыв, пожелание)
+          </label>
+          <textarea
+            id="feedback-message"
+            name="feedbackMessage"
+            rows="4"
+            placeholder="Хочу записаться на пробное занятие..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="agree"
+              required
+            />
+            Я согласен(а) на обработку персональных данных
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--primary">
+          Отправить сообщение
+        </button>
+      </form>
+
+      <p class="back-to-top">
+        <a href="#top">К началу страницы ↑</a>
+      </p>
+    </section>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

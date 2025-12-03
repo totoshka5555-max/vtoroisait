@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Плавание — Магазин абонементов</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img
+          src="https://4.downloader.disk.yandex.ru/preview/971c4c9f32a8051cfb2c8b6c931960212742e8903cf32d0489fcae1459bdbaf6/inf/KbcLMIbcXiVXFnBxz64h_LtSDVBh1fRbTj-aX6_ihu4r9wltf6XoA2Xd2uxmuJlHlXXS5zb0LEMCA5_ERkO_jA%3D%3D?uid=1130000067492822&filename=ChatGPT%20Image%2025%20%D0%BD%D0%BE%D1%8F%D0%B1.%202025%20%D0%B3.%2C%2016_56_01.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1130000067492822&tknv=v3&size=2940x1662"
+          alt="На главную"
+        />
+      </a>
+
+      <h1 class="site-title">Плавание</h1>
+
+      <nav class="main-nav" aria-label="Основная навигация по сайту">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="techniques.html" class="nav-link">Техники</a>
+          </li>
+          <li class="nav-item">
+            <a href="shop.html" class="nav-link nav-link--active">Магазин</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button type="button" class="cart-button" id="cart-button">
+        Корзина: <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Внутренняя навигация по этой странице -->
+    <section id="top" class="page-section page-section--intro">
+      <h2 class="visually-hidden">Содержание страницы</h2>
+      <p class="page-intro-title"><strong>На этой странице:</strong></p>
+      <nav class="page-nav" aria-label="Навигация по разделам магазина">
+        <ul class="page-nav__list">
+          <li><a href="#passes">Абонементы</a></li>
+          <li><a href="#order">Оформить заказ</a></li>
+          <li><a href="#top">К началу страницы</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section id="passes" class="page-section">
+      <h2>Абонементы на плавание</h2>
+      <p>
+        Выберите подходящий абонемент, а затем оформите заказ ниже.
+        Клик по кнопке «В корзину» увеличит счётчик корзины в шапке сайта.
+      </p>
+
+      <!-- 6 повторяющихся блоков с абонементами -->
+      <div class="shop-grid">
+        <article class="product-card">
+          <h3 class="product-title">Абонемент «Новичок»</h3>
+          <p class="product-description">
+            2 тренировки в неделю в группе для начинающих.
+          </p>
+          <p class="product-price">2 500 ₽ / месяц</p>
+          <button
+            type="button"
+            class="btn btn--primary add-to-cart"
+            data-product="novice"
+          >
+            В корзину
+          </button>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-title">Абонемент «Уверенный»</h3>
+          <p class="product-description">
+            3 тренировки в неделю, работа над техникой и выносливостью.
+          </p>
+          <p class="product-price">3 500 ₽ / месяц</p>
+          <button
+            type="button"
+            class="btn btn--primary add-to-cart"
+            data-product="confident"
+          >
+            В корзину
+          </button>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-title">Абонемент «Профи»</h3>
+          <p class="product-description">
+            4 тренировки в неделю, подготовка к соревнованиям.
+          </p>
+          <p class="product-price">4 500 ₽ / месяц</p>
+          <button
+            type="button"
+            class="btn btn--primary add-to-cart"
+            data-product="pro"
+          >
+            В корзину
+          </button>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-title">Детская группа</h3>
+          <p class="product-description">
+            2 занятия в неделю для детей 7–12 лет, обучение базовым навыкам.
+          </p>
+          <p class="product-price">2 000 ₽ / месяц</p>
+          <button
+            type="button"
+            class="btn btn--primary add-to-cart"
+            data-product="kids"
+          >
+            В корзину
+          </button>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-title">Утренний абонемент</h3>
+          <p class="product-description">
+            Утренние тренировки в будни для тех, кто свободен до работы.
+          </p>
+          <p class="product-price">2 800 ₽ / месяц</p>
+          <button
+            type="button"
+            class="btn btn--primary add-to-cart"
+            data-product="morning"
+          >
+            В корзину
+          </button>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-title">Вечерний абонемент</h3>
+          <p class="product-description">
+            Вечерние занятия для занятых днём студентов и специалистов.
+          </p>
+          <p class="product-price">3 000 ₽ / месяц</p>
+          <button
+            type="button"
+            class="btn btn--primary add-to-cart"
+            data-product="evening"
+          >
+            В корзину
+          </button>
+        </article>
+      </div>
+
+      <p class="back-to-top">
+        <a href="#top">К началу страницы ↑</a>
+      </p>
+    </section>
+
+    <section id="order" class="page-section">
+      <h2>Оформить заказ абонемента</h2>
+      <p class="form-note">
+        Эта форма отправляет данные на учебный сервер
+        <code>https://httpbin.org/post</code>.
+        Обязательные поля не дают отправить пустые значения по умолчанию.
+      </p>
+
+      <!-- Страница с формой заказа: text, number, radio -->
+      <form
+        action="https://httpbin.org/post"
+        method="post"
+        class="form"
+        id="order-form"
+      >
+        <div class="form-group">
+          <label for="order-name">Ваше имя</label>
+          <input
+            type="text"
+            id="order-name"
+            name="customerName"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="order-email">Email</label>
+          <input
+            type="email"
+            id="order-email"
+            name="customerEmail"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="order-pass">Выберите абонемент</label>
+          <select id="order-pass" name="passType" required>
+            <option value="">Выберите...</option>
+            <option value="novice">Абонемент «Новичок»</option>
+            <option value="confident">Абонемент «Уверенный»</option>
+            <option value="pro">Абонемент «Профи»</option>
+            <option value="kids">Детская группа</option>
+            <option value="morning">Утренний абонемент</option>
+            <option value="evening">Вечерний абонемент</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="order-quantity">
+            Сколько раз в неделю вы хотите заниматься?
+          </label>
+          <input
+            type="number"
+            id="order-quantity"
+            name="lessonsPerWeek"
+            min="1"
+            max="14"
+            required
+          />
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Ваш уровень плавания</legend>
+
+          <label>
+            <input
+              type="radio"
+              name="level"
+              value="novice"
+              required
+            />
+            Новичок
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="level"
+              value="middle"
+            />
+            Средний
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="level"
+              value="advanced"
+            />
+            Продвинутый
+          </label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="order-comment">
+            Комментарий к заказу (необязательно)
+          </label>
+          <textarea
+            id="order-comment"
+            name="orderComment"
+            rows="3"
+            placeholder="Например: удобнее вечером после 19:00..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="agree"
+              required
+            />
+            Я соглашаюсь на обработку персональных данных
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--primary">
+          Отправить заказ
+        </button>
+      </form>
+
+      <p class="back-to-top">
+        <a href="#top">К началу страницы ↑</a>
+      </p>
+    </section>
+  </main>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
